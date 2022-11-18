@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.*
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -18,6 +19,7 @@ import com.example.egfwdfirstproject.R
 import com.example.egfwdfirstproject.databinding.FragmentShoesListBinding
 import com.example.egfwdfirstproject.ui.model.ShoeViewModel
 import com.example.egfwdfirstproject.ui.model.Shoe
+import com.google.android.material.snackbar.BaseTransientBottomBar.Duration
 
 
 class ShoesList : Fragment() {
@@ -51,9 +53,15 @@ class ShoesList : Fragment() {
 
         }
         //Observe from view model
-        viewModel.shoeList.observe(viewLifecycleOwner){
-            shoes->
-            buildView(shoes)
+        viewModel.toast.observe(viewLifecycleOwner){
+            if (it){
+                subscribeData()
+
+            }else{
+                Toast.makeText(requireContext(), "Plz Enter Data", Toast.LENGTH_SHORT).show()
+                subscribeData()
+
+            }
         }
 
 
@@ -144,6 +152,12 @@ class ShoesList : Fragment() {
         }
 
 
+    }
+    fun subscribeData(){
+        viewModel.shoeList.observe(viewLifecycleOwner){
+                shoes->
+            buildView(shoes)
+        }
     }
 
 }

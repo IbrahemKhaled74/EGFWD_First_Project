@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.example.egfwdfirstproject.ui.fragments.welcome.Welcome"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcome_to_instruction"
+            app:destination="@id/instruction" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.egfwdfirstproject.ui.fragments.login.Login"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_welcome"
+            app:destination="@id/welcome" />
+    </fragment>
+    <fragment
+        android:id="@+id/instruction"
+        android:name="com.example.egfwdfirstproject.ui.fragments.instruction.Instruction"
+        android:label="instruction"
+        tools:layout="@layout/fragment_instruction" >
+        <action
+            android:id="@+id/action_instruction_to_shoes_List"
+            app:destination="@id/shoes_List" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoes_List"
+        android:name="com.example.egfwdfirstproject.ui.fragments.shoeList.ShoesList"
+        android:label="Shoes List"
+        tools:layout="@layout/fragment_shoes__list" >
+        <action
+            android:id="@+id/action_shoes_List_to_shoeDetail"
+            app:destination="@id/shoeDetail"
+            app:popUpToInclusive="false" />
+
+
+        <action
+            android:id="@+id/action_shoes_List_to_login2"
+            app:destination="@id/login"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="false" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetail"
+        android:name="com.example.egfwdfirstproject.ui.fragments.shoeDetails.ShoeDetail"
+        android:label="Shoes Details"
+        tools:layout="@layout/fragment_shoe_detail" >
+        <action
+            android:id="@+id/action_shoeDetail_to_shoes_List"
+            app:destination="@id/shoes_List"
+            app:popUpTo="@id/shoes_List"
+            app:popUpToInclusive="true" />
+
+
+    </fragment>
+</navigation>

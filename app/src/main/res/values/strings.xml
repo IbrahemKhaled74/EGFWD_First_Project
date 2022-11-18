@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Egfwd First Project</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="password">Password</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="next">Next</string>
+    <string name="don_t_have_account">Don\'t have Account ?</string>
+    <string name="create">Create</string>
+    <string name="or">Or</string>
+    <string name="login">Login</string>
+    <string name="welcome_to_my_first_app">Welcome to My First App</string>
+    <string name="my_name_is_ibrahem">My Name is Ibrahem</string>
+    <string name="enter_shoe_company">Enter shoe company</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="enter_shoe_size">Enter shoe size</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="enter_shoe_name">Enter shoe name</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="log_out">log Out</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="enter_shoe_desc">Enter Shoe Desc</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+</resources>
